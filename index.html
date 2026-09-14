@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Listening examples for selective speech enhancement that removes requested degradations while preserving acoustic context.">
+    <title>Selective Speech Enhancement: Removing Requested Degradations While Preserving Acoustic Context</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap hero">
+        <p class="eyebrow">Audio examples</p>
+        <h1>Selective Speech Enhancement: Removing Requested Degradations While Preserving Acoustic Context</h1>
+        <p class="lede">
+          Listening examples demonstrate selective removal across five acoustic degradations.
+          Each degraded input identifies the degradations it contains, and every model output
+          is paired with the exact waveform target for its request.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <noscript>
+        <p class="notice">JavaScript is required to display the listening examples.</p>
+      </noscript>
+
+      <section class="guide" aria-labelledby="guide-title">
+        <div>
+          <p class="section-kicker">How to listen</p>
+          <h2 id="guide-title">Compare the output with its target</h2>
+        </div>
+        <p>
+          First listen to each degraded input. For each request, compare the selective model
+          output with the matched target. Requested degradations should be removed;
+          degradations marked retained should remain audible.
+        </p>
+      </section>
+
+      <div id="scenes" class="scene-groups" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <p>
+          Test speech: VCTK speakers p278 and p330. Ambient recordings: WHAM! test set.
+          Foreground events: FSD50K evaluation
+          <a href="https://freesound.org/people/buzzmsc/sounds/428860/">clip 428860</a>
+          by buzzmsc (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)
+          and <a href="https://freesound.org/people/UncleSigmund/sounds/117120/">clip 117120</a>
+          by UncleSigmund (<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>).
+        </p>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

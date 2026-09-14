@@ -1,0 +1,240 @@
+{
+  "scenes": [
+    {
+      "id": "room-response-example",
+      "title": "Ambient noise, foreground interference, and room response",
+      "description": "A 5.72-second held-out VCTK utterance containing environmental background noise, a clearly audible foreground dog-barking event, and a simulated room response comprising early reflections and late reverberation. Spoken text: “Western countries condemned the conduct of the poll.”",
+      "present": [
+        "AmbientNoise",
+        "ForegroundInterference",
+        "EarlyReflections",
+        "LateReverberation"
+      ],
+      "input": "audio/sample-01/degraded-input.wav",
+      "requests": [
+        {
+          "remove": [
+            "AmbientNoise"
+          ],
+          "retain": [
+            "ForegroundInterference",
+            "EarlyReflections",
+            "LateReverberation"
+          ],
+          "output": "audio/sample-01/remove-ambient__selective.wav",
+          "target": "audio/sample-01/remove-ambient__target.wav"
+        },
+        {
+          "remove": [
+            "ForegroundInterference"
+          ],
+          "retain": [
+            "AmbientNoise",
+            "EarlyReflections",
+            "LateReverberation"
+          ],
+          "output": "audio/sample-01/remove-foreground__selective.wav",
+          "target": "audio/sample-01/remove-foreground__target.wav"
+        },
+        {
+          "remove": [
+            "LateReverberation"
+          ],
+          "retain": [
+            "AmbientNoise",
+            "ForegroundInterference",
+            "EarlyReflections"
+          ],
+          "output": "audio/sample-01/remove-late-reverberation__selective.wav",
+          "target": "audio/sample-01/remove-late-reverberation__target.wav"
+        },
+        {
+          "remove": [
+            "AmbientNoise",
+            "ForegroundInterference"
+          ],
+          "retain": [
+            "EarlyReflections",
+            "LateReverberation"
+          ],
+          "output": "audio/sample-01/remove-ambient-foreground__selective.wav",
+          "target": "audio/sample-01/remove-ambient-foreground__target.wav"
+        },
+        {
+          "remove": [
+            "AmbientNoise",
+            "LateReverberation"
+          ],
+          "retain": [
+            "ForegroundInterference",
+            "EarlyReflections"
+          ],
+          "output": "audio/sample-01/remove-ambient-late__selective.wav",
+          "target": "audio/sample-01/remove-ambient-late__target.wav"
+        },
+        {
+          "remove": [
+            "ForegroundInterference",
+            "LateReverberation"
+          ],
+          "retain": [
+            "AmbientNoise",
+            "EarlyReflections"
+          ],
+          "output": "audio/sample-01/remove-foreground-late__selective.wav",
+          "target": "audio/sample-01/remove-foreground-late__target.wav"
+        },
+        {
+          "remove": [
+            "AmbientNoise",
+            "ForegroundInterference",
+            "LateReverberation"
+          ],
+          "retain": [
+            "EarlyReflections"
+          ],
+          "output": "audio/sample-01/remove-ambient-foreground-late__selective.wav",
+          "target": "audio/sample-01/remove-ambient-foreground-late__target.wav"
+        },
+        {
+          "remove": [
+            "EarlyReflections",
+            "LateReverberation"
+          ],
+          "retain": [
+            "AmbientNoise",
+            "ForegroundInterference"
+          ],
+          "output": "audio/sample-01/remove-full-reverberation__selective.wav",
+          "target": "audio/sample-01/remove-full-reverberation__target.wav"
+        },
+        {
+          "remove": [
+            "AmbientNoise",
+            "EarlyReflections",
+            "LateReverberation"
+          ],
+          "retain": [
+            "ForegroundInterference"
+          ],
+          "output": "audio/sample-01/remove-ambient-full-reverberation__selective.wav",
+          "target": "audio/sample-01/remove-ambient-full-reverberation__target.wav"
+        },
+        {
+          "remove": [
+            "ForegroundInterference",
+            "EarlyReflections",
+            "LateReverberation"
+          ],
+          "retain": [
+            "AmbientNoise"
+          ],
+          "output": "audio/sample-01/remove-foreground-full-reverberation__selective.wav",
+          "target": "audio/sample-01/remove-foreground-full-reverberation__target.wav"
+        },
+        {
+          "full": true,
+          "remove": [
+            "AmbientNoise",
+            "ForegroundInterference",
+            "EarlyReflections",
+            "LateReverberation"
+          ],
+          "retain": [],
+          "output": "audio/sample-01/full-repair__selective.wav",
+          "target": "audio/sample-01/full-repair__target.wav"
+        }
+      ]
+    },
+    {
+      "id": "coloration-example",
+      "title": "Ambient noise, emergency siren, and coloration",
+      "description": "A 5.72-second held-out VCTK utterance from a different speaker, containing environmental background noise, a clearly audible foreground emergency siren, and 18 dB/octave low-pass coloration at 3.00 kHz. Spoken text: “Creative, expressive football was the order of the day.”",
+      "present": [
+        "AmbientNoise",
+        "ForegroundInterference",
+        "Coloration"
+      ],
+      "input": "audio/sample-02/degraded-input.wav",
+      "requests": [
+        {
+          "remove": [
+            "AmbientNoise"
+          ],
+          "retain": [
+            "ForegroundInterference",
+            "Coloration"
+          ],
+          "output": "audio/sample-02/remove-ambient__selective.wav",
+          "target": "audio/sample-02/remove-ambient__target.wav"
+        },
+        {
+          "remove": [
+            "ForegroundInterference"
+          ],
+          "retain": [
+            "AmbientNoise",
+            "Coloration"
+          ],
+          "output": "audio/sample-02/remove-foreground__selective.wav",
+          "target": "audio/sample-02/remove-foreground__target.wav"
+        },
+        {
+          "remove": [
+            "Coloration"
+          ],
+          "retain": [
+            "AmbientNoise",
+            "ForegroundInterference"
+          ],
+          "output": "audio/sample-02/remove-coloration__selective.wav",
+          "target": "audio/sample-02/remove-coloration__target.wav"
+        },
+        {
+          "remove": [
+            "AmbientNoise",
+            "ForegroundInterference"
+          ],
+          "retain": [
+            "Coloration"
+          ],
+          "output": "audio/sample-02/remove-ambient-foreground__selective.wav",
+          "target": "audio/sample-02/remove-ambient-foreground__target.wav"
+        },
+        {
+          "remove": [
+            "AmbientNoise",
+            "Coloration"
+          ],
+          "retain": [
+            "ForegroundInterference"
+          ],
+          "output": "audio/sample-02/remove-ambient-coloration__selective.wav",
+          "target": "audio/sample-02/remove-ambient-coloration__target.wav"
+        },
+        {
+          "remove": [
+            "ForegroundInterference",
+            "Coloration"
+          ],
+          "retain": [
+            "AmbientNoise"
+          ],
+          "output": "audio/sample-02/remove-foreground-coloration__selective.wav",
+          "target": "audio/sample-02/remove-foreground-coloration__target.wav"
+        },
+        {
+          "full": true,
+          "remove": [
+            "AmbientNoise",
+            "ForegroundInterference",
+            "Coloration"
+          ],
+          "retain": [],
+          "output": "audio/sample-02/full-repair__selective.wav",
+          "target": "audio/sample-02/full-repair__target.wav"
+        }
+      ]
+    }
+  ]
+}
